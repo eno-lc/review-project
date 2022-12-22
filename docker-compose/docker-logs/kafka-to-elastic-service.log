@@ -1,0 +1,1414 @@
+2022-12-20 08:38:54 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://config-server:8888
+2022-12-20 08:38:54 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service,config-client, profiles=[kafka_to_elastic], label=null, version=8c9d506e166c45bbc34c753d6547188e80281116, state=null
+2022-12-20 08:38:54 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client.yml'}]
+2022-12-20 08:38:54 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2022-12-20 08:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-12-20 08:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186ms. Found 1 Elasticsearch repository interfaces.
+2022-12-20 08:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-12-20 08:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-12-20 08:38:56 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=ea0c2f47-af3f-3cda-b384-0395509a8776
+2022-12-20 08:38:56 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$70f4cdb5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-20 08:38:56 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-20 08:38:56 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 08:38:56 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 08:38:56 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671525536600
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:56 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 08:38:57 [main] INFO  o.s.d.e.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.4.RELEASE
+2022-12-20 08:38:57 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2022-12-20 08:38:57 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client used: 7.9.1
+2022-12-20 08:38:57 [main] WARN  o.s.d.e.support.VersionInfo - Version mismatch in between Elasticsearch Clients build/use: 7.6.2 - 7.9.1
+2022-12-20 08:38:57 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch cluster: 7.9.1
+2022-12-20 08:38:58 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b58fcfdb-b081-4ca8-8849-70b5067e47df
+
+2022-12-20 08:38:59 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2022-12-20 08:38:59 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 6.146 seconds (JVM running for 6.995)
+2022-12-20 08:38:59 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
+2022-12-20 08:38:59 [main] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2022-12-20 08:38:59 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 08:38:59 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671525539426
+2022-12-20 08:38:59 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 08:38:59 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 08:38:59 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 08:38:59 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 08:38:59 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671525539446
+2022-12-20 08:38:59 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 08:38:59 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 08:38:59 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 08:38:59 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 08:39:00 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 08:39:00 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 08:39:00 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 08:39:00 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Finished assignment for group at generation 1: {consumer-twitterTopicListener-1-dd7d0290-9348-4b8f-8c7c-d1f66707d63b=Assignment(partitions=[twitter-topic-0]), consumer-twitterTopicListener-2-0843f448-fc89-4beb-9a5f-392a5effa8f4=Assignment(partitions=[twitter-topic-1])}
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation 1
+2022-12-20 08:39:06 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation 1
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2022-12-20 08:39:06 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2022-12-20 08:39:06 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-0
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-1
+2022-12-20 08:39:06 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-0 to offset 0.
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-1 to offset 0.
+2022-12-20 08:39:06 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2022-12-20 08:39:06 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2022-12-20 08:40:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1375961552122044417], partitions [0] and offsets [0], sending it to elastic: Thread id 67
+2022-12-20 08:40:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1450897584596291584, 17062287, 1319903660000698370], partitions [1, 1, 1] and offsets [0, 1, 2], sending it to elastic: Thread id 69
+2022-12-20 08:40:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605120580805877760]
+2022-12-20 08:40:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605120580805877760
+2022-12-20 08:40:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605120665736347648, 1605120679568805888, 1605120712498237441]
+2022-12-20 08:40:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605120665736347648
+2022-12-20 08:40:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 5 number of message received with keys [1298618936276074497, 1431290468231376896, 267264142, 17719592, 94717361], partitions [0, 0, 0, 0, 0] and offsets [1, 2, 3, 4, 5], sending it to elastic: Thread id 67
+2022-12-20 08:40:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [136034424, 1143436845021376512, 821664354517053444], partitions [1, 1, 1] and offsets [3, 4, 5], sending it to elastic: Thread id 69
+2022-12-20 08:40:09 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605120753669750788, 1605120775601651712, 1605120794551472129]
+2022-12-20 08:40:09 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605120673084735488, 1605120682819751936, 1605120722481057792, 1605120768953589760, 1605120823093706752]
+2022-12-20 08:40:09 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605120753669750788
+2022-12-20 08:40:09 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605120673084735488
+2022-12-20 15:02:29 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://config-server:8888
+2022-12-20 15:02:30 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service,config-client, profiles=[kafka_to_elastic], label=null, version=b74d589740e2608455710bcaac2187cb274dd778, state=null
+2022-12-20 15:02:30 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client.yml'}]
+2022-12-20 15:02:30 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2022-12-20 15:02:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:02:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 190ms. Found 1 Elasticsearch repository interfaces.
+2022-12-20 15:02:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:02:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-12-20 15:02:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e42a222c-39aa-38fc-980d-071ea8bd4fe1
+2022-12-20 15:02:31 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$5f90aaa3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-20 15:02:32 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-20 15:02:32 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:02:32 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:02:32 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671548552197
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:32 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:02:33 [main] INFO  o.s.d.e.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.4.RELEASE
+2022-12-20 15:02:33 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2022-12-20 15:02:33 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client used: 7.9.1
+2022-12-20 15:02:33 [main] WARN  o.s.d.e.support.VersionInfo - Version mismatch in between Elasticsearch Clients build/use: 7.6.2 - 7.9.1
+2022-12-20 15:02:33 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch cluster: 7.9.1
+2022-12-20 15:02:33 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 57a83b42-d8f2-4baf-83a9-ddd444ea2928
+
+2022-12-20 15:02:34 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2022-12-20 15:02:34 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 5.686 seconds (JVM running for 6.392)
+2022-12-20 15:02:34 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
+2022-12-20 15:02:34 [main] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2022-12-20 15:02:34 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:02:34 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671548554955
+2022-12-20 15:02:34 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:02:34 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:02:34 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:02:34 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:02:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671548554975
+2022-12-20 15:02:34 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:02:34 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:02:34 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:02:34 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:02:34 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:02:34 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:02:34 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:02:34 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:02:38 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Finished assignment for group at generation 5: {consumer-twitterTopicListener-2-f7885fdd-6819-4338-8318-0973da221fd2=Assignment(partitions=[twitter-topic-1]), consumer-twitterTopicListener-1-20899dc3-a884-49b5-9ead-43671593d3c7=Assignment(partitions=[twitter-topic-0])}
+2022-12-20 15:02:38 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation 5
+2022-12-20 15:02:38 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation 5
+2022-12-20 15:02:38 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2022-12-20 15:02:38 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2022-12-20 15:02:38 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Setting offset for partition twitter-topic-0 to the committed offset FetchPosition{offset=40, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-1:9092 (id: 1 rack: null)], epoch=absent}}
+2022-12-20 15:02:38 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Setting offset for partition twitter-topic-1 to the committed offset FetchPosition{offset=40, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-3:9092 (id: 3 rack: null)], epoch=absent}}
+2022-12-20 15:02:38 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2022-12-20 15:02:38 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2022-12-20 15:03:10 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1280927281142251526, 1094022475736903687], partitions [1, 1] and offsets [40, 41], sending it to elastic: Thread id 69
+2022-12-20 15:03:10 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [204258175], partitions [0] and offsets [40], sending it to elastic: Thread id 67
+2022-12-20 15:03:11 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217125475524610]
+2022-12-20 15:03:11 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217126935150592, 1605217161752236034]
+2022-12-20 15:03:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217125475524610
+2022-12-20 15:03:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217126935150592
+2022-12-20 15:03:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [937612887404830720, 1094022475736903687], partitions [1, 1] and offsets [42, 43], sending it to elastic: Thread id 69
+2022-12-20 15:03:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 8 number of message received with keys [159706162, 394767844, 1266646810027651072, 705895423, 711383070, 1582470217141215234, 1177944506332635137, 18036712], partitions [0, 0, 0, 0, 0, 0, 0, 0] and offsets [41, 42, 43, 44, 45, 46, 47, 48], sending it to elastic: Thread id 67
+2022-12-20 15:03:11 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217137756233728, 1605217123931922433, 1605217184841887744, 1605217182174019588, 1605217189178531840, 1605217194941435904, 1605217206052466689, 1605217210070433794]
+2022-12-20 15:03:11 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217188859854848, 1605217204504432640]
+2022-12-20 15:03:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217137756233728
+2022-12-20 15:03:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217188859854848
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1375961552122044417], partitions [0] and offsets [49], sending it to elastic: Thread id 67
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1280618252771696641, 1280927281142251526], partitions [1, 1] and offsets [44, 45], sending it to elastic: Thread id 69
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217220891754498, 1605217226860204032]
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217220891754498
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217220883517440]
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217220883517440
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1140325790577582080, 350047641, 234892210], partitions [1, 1, 1] and offsets [46, 47, 48], sending it to elastic: Thread id 69
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1100256916490674178], partitions [0] and offsets [50], sending it to elastic: Thread id 67
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217240013570049]
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217263065305093, 1605217272846483456, 1605217284250796034]
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217240013570049
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217263065305093
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 7 number of message received with keys [1342082132173152258, 1404372913181110276, 186631717, 3114693488, 1584630902583427073, 292450753, 636973348], partitions [1, 1, 1, 1, 1, 1, 1] and offsets [49, 50, 51, 52, 53, 54, 55], sending it to elastic: Thread id 69
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1056746486241939456, 1513947936], partitions [0, 0] and offsets [51, 52], sending it to elastic: Thread id 67
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217301652860929, 1605217344636215297]
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217293423718405, 1605217343772270594, 1605217351703875584, 1605217371462856704, 1605217390190624775, 1605217436134940673, 1605217460650594304]
+2022-12-20 15:04:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217301652860929
+2022-12-20 15:04:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217293423718405
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [2384474598, 1554697486316343296], partitions [0, 0] and offsets [53, 54], sending it to elastic: Thread id 67
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1555968013651804163, 1519275214789496833], partitions [1, 1] and offsets [56, 57], sending it to elastic: Thread id 69
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217463071027205, 1605217473518661633]
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217463071027205
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217465159532544, 1605217480552521728]
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217465159532544
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1244557912061538304, 1527241546550108160], partitions [0, 0] and offsets [55, 56], sending it to elastic: Thread id 67
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [199844086, 1098062616], partitions [1, 1] and offsets [58, 59], sending it to elastic: Thread id 69
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217484713627648, 1605217521514450945]
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217535208873984, 1605217550081863680]
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217484713627648
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217535208873984
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1103913044554407944, 1599419245430964230, 218150156, 1649951856], partitions [0, 0, 0, 0] and offsets [57, 58, 59, 60], sending it to elastic: Thread id 67
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1546235759774076930, 1278378925706498048, 353566616, 572849388], partitions [1, 1, 1, 1] and offsets [60, 61, 62, 63], sending it to elastic: Thread id 69
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217557849464832, 1605217578083061760, 1605217668306722816, 1605217709263708160]
+2022-12-20 15:05:08 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217557849464832
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217589789163522, 1605217674090487808, 1605217701823385602, 1605217699746963456]
+2022-12-20 15:05:08 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217589789163522
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1367656120739762185, 1583435177791229952, 14157064], partitions [1, 1, 1] and offsets [64, 65, 66], sending it to elastic: Thread id 69
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1024918240613597184, 1455923262366568453], partitions [0, 0] and offsets [61, 62], sending it to elastic: Thread id 67
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217718386405381, 1605217719963750400, 1605217733229965312]
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217749411790849, 1605217763513225217]
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217718386405381
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217749411790849
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1598422286851252234, 1239793634486042624], partitions [1, 1] and offsets [67, 68], sending it to elastic: Thread id 69
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1250831317, 141136296], partitions [0, 0] and offsets [63, 64], sending it to elastic: Thread id 67
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217752355983361, 1605217784161783809]
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217805493739524, 1605217812053721088]
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217752355983361
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217805493739524
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [29817528, 248642249, 1209574603716222977, 705233083738370048], partitions [1, 1, 1, 1] and offsets [69, 70, 71, 72], sending it to elastic: Thread id 69
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1177944506332635137], partitions [0] and offsets [65], sending it to elastic: Thread id 67
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217802356490240, 1605217821675474944, 1605217839081717761, 1605217872103579655]
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217872036655107]
+2022-12-20 15:05:46 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217802356490240
+2022-12-20 15:05:46 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217872036655107
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1368800100705734659], partitions [1] and offsets [73], sending it to elastic: Thread id 69
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1590105816560205824, 1266646810027651072, 156194920], partitions [0, 0, 0] and offsets [66, 67, 68], sending it to elastic: Thread id 67
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217878709764097, 1605217887337476097, 1605217916789686274]
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217875681124355]
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217878709764097
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217875681124355
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3329102848], partitions [0] and offsets [69], sending it to elastic: Thread id 67
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1014944290236174336, 1207195739786489856, 2151002491], partitions [1, 1, 1] and offsets [74, 75, 76], sending it to elastic: Thread id 69
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217918866059264, 1605217931373252608, 1605217953217126406]
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217953343066112]
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217918866059264
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217953343066112
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [584834521, 1375961552122044417, 1347999815460904960, 4839215822], partitions [0, 0, 0, 0] and offsets [70, 71, 72, 73], sending it to elastic: Thread id 67
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [572849388, 1573710090326228992, 1854402967], partitions [1, 1, 1] and offsets [77, 78, 79], sending it to elastic: Thread id 69
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217966437572609, 1605217978790064128, 1605217983655251971, 1605218016098123777]
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605217959349141506, 1605217963895918594, 1605218037770072064]
+2022-12-20 15:06:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217966437572609
+2022-12-20 15:06:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605217959349141506
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1493158746205614080, 1545228792641224706], partitions [0, 0] and offsets [74, 75], sending it to elastic: Thread id 67
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1438179113806696448, 1589200366562074624], partitions [1, 1] and offsets [80, 81], sending it to elastic: Thread id 69
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218093621727232, 1605218115234603008]
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218044099563521, 1605218056342343681]
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218093621727232
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218044099563521
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [3148490199, 1598740453020602369], partitions [1, 1] and offsets [82, 83], sending it to elastic: Thread id 69
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1434197668906024960], partitions [0] and offsets [76], sending it to elastic: Thread id 67
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218107144175616]
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218120288944132, 1605218139817508865]
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218107144175616
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218120288944132
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [973678263934574593, 1591766142120595456, 431480192], partitions [0, 0, 0] and offsets [77, 78, 79], sending it to elastic: Thread id 67
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 5 number of message received with keys [353566616, 1095387893290463233, 1095387893290463233, 1095387893290463233, 1568215252172525568], partitions [1, 1, 1, 1, 1] and offsets [84, 85, 86, 87, 88], sending it to elastic: Thread id 69
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218166875258880, 1605218174076682242, 1605218182855380992, 1605218191495626758, 1605218199523725313]
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218157744078849, 1605218196897910784, 1605218202115624961]
+2022-12-20 15:07:04 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218166875258880
+2022-12-20 15:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218157744078849
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1095387893290463233, 1095387893290463233, 1095387893290463233, 1095387893290463233], partitions [1, 1, 1, 1] and offsets [89, 90, 91, 92], sending it to elastic: Thread id 69
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1572632580083572737], partitions [0] and offsets [80], sending it to elastic: Thread id 67
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218201779961862, 1605218211032879105, 1605218219937173508, 1605218227721846785]
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218208734416901]
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218201779961862
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218208734416901
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1095387893290463233, 1095387893290463233, 1095387893290463233], partitions [1, 1, 1] and offsets [93, 94, 95], sending it to elastic: Thread id 69
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2463915396], partitions [0] and offsets [81], sending it to elastic: Thread id 67
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218254015721472]
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218238127869952, 1605218244612313088, 1605218261049790464]
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218254015721472
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218238127869952
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [949717869830471681, 1453351739898224777], partitions [0, 0] and offsets [82, 83], sending it to elastic: Thread id 67
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 5 number of message received with keys [1095387893290463233, 1095387893290463233, 1095387893290463233, 2950932760, 1095387893290463233], partitions [1, 1, 1, 1, 1] and offsets [96, 97, 98, 99, 100], sending it to elastic: Thread id 69
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218269442588673, 1605218277701177346, 1605218287507238914, 1605218289050963974, 1605218296923836416]
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218282918871040, 1605218322043195392]
+2022-12-20 15:07:35 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218269442588673
+2022-12-20 15:07:35 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218282918871040
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1318985240, 1573125188279242753, 1443203305946050560], partitions [1, 1, 1] and offsets [101, 102, 103], sending it to elastic: Thread id 69
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1471115804506828802, 1549660505350017025], partitions [0, 0] and offsets [84, 85], sending it to elastic: Thread id 67
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218333447655431, 1605218384291172354]
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218358349242380, 1605218366402068485, 1605218375143391233]
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218333447655431
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218358349242380
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [15492735, 855841195], partitions [0, 0] and offsets [86, 87], sending it to elastic: Thread id 67
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1318985240, 1352379402974330880, 1198357694446485504, 843791198], partitions [1, 1, 1, 1] and offsets [104, 105, 106, 107], sending it to elastic: Thread id 69
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218463232000000, 1605218498447564800]
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218385607942145, 1605218408701710338, 1605218432555024384, 1605218448505610241]
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218463232000000
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218385607942145
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1411051959684145156, 1385777290525626374], partitions [1, 1] and offsets [108, 109], sending it to elastic: Thread id 69
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [405664289, 1532829386919104517], partitions [0, 0] and offsets [88, 89], sending it to elastic: Thread id 67
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218484694454274, 1605218498019753985]
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218504675688450, 1605218542164615170]
+2022-12-20 15:08:26 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218484694454274
+2022-12-20 15:08:26 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218504675688450
+2022-12-20 15:10:04 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://config-server:8888
+2022-12-20 15:10:06 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service,config-client, profiles=[kafka_to_elastic], label=null, version=b74d589740e2608455710bcaac2187cb274dd778, state=null
+2022-12-20 15:10:06 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client.yml'}]
+2022-12-20 15:10:06 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2022-12-20 15:10:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:10:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153ms. Found 1 Elasticsearch repository interfaces.
+2022-12-20 15:10:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:10:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-12-20 15:10:07 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e42a222c-39aa-38fc-980d-071ea8bd4fe1
+2022-12-20 15:10:07 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$882c53ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-20 15:10:07 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-20 15:10:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:10:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:10:08 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671549008045
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:10:08 [main] INFO  o.s.d.e.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.4.RELEASE
+2022-12-20 15:10:08 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2022-12-20 15:10:08 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client used: 7.9.1
+2022-12-20 15:10:08 [main] WARN  o.s.d.e.support.VersionInfo - Version mismatch in between Elasticsearch Clients build/use: 7.6.2 - 7.9.1
+2022-12-20 15:10:08 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch cluster: 7.9.1
+2022-12-20 15:10:09 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f78cb847-4394-4a04-9f53-b7ebe9a2b298
+
+2022-12-20 15:10:09 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2022-12-20 15:10:09 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 5.52 seconds (JVM running for 6.069)
+2022-12-20 15:10:09 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
+2022-12-20 15:10:09 [main] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2022-12-20 15:10:09 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:10:09 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671549009934
+2022-12-20 15:10:09 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:10:09 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:10:09 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:10:09 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:10:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671549009955
+2022-12-20 15:10:09 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:10:09 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:10:09 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:10:09 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:10:09 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:10:09 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:10:09 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:10:09 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:10:12 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Finished assignment for group at generation 7: {consumer-twitterTopicListener-2-9a5776d1-83b6-4600-b91f-27dc40d352d1=Assignment(partitions=[twitter-topic-1]), consumer-twitterTopicListener-1-a048e3c9-994c-4fa8-bbfa-81eec4ec450c=Assignment(partitions=[twitter-topic-0])}
+2022-12-20 15:10:13 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation 7
+2022-12-20 15:10:13 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation 7
+2022-12-20 15:10:13 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2022-12-20 15:10:13 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2022-12-20 15:10:13 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Setting offset for partition twitter-topic-1 to the committed offset FetchPosition{offset=110, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-3:9092 (id: 3 rack: null)], epoch=absent}}
+2022-12-20 15:10:13 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Setting offset for partition twitter-topic-0 to the committed offset FetchPosition{offset=90, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-1:9092 (id: 1 rack: null)], epoch=absent}}
+2022-12-20 15:10:13 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2022-12-20 15:10:13 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2197005655], partitions [1] and offsets [110], sending it to elastic: Thread id 69
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1368794843418222594, 1599456205499686913, 297939910], partitions [0, 0, 0] and offsets [90, 91, 92], sending it to elastic: Thread id 67
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218866207920129]
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218869895114753, 1605218915478822912, 1605218924773400576]
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218866207920129
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218869895114753
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [218150156], partitions [0] and offsets [93], sending it to elastic: Thread id 67
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 8 number of message received with keys [3211386365, 1562902989517467649, 1218638954733473793, 1572531406542344193, 1565280726156804099, 1367656120739762185, 424508646, 1459772385293320193], partitions [1, 1, 1, 1, 1, 1, 1, 1] and offsets [111, 112, 113, 114, 115, 116, 117, 118], sending it to elastic: Thread id 69
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219002007302145]
+2022-12-20 15:10:17 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219002007302145
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605218870326747138, 1605218883304321024, 1605218936995270656, 1605218963666845696, 1605218967366295552, 1605218978364018689, 1605218988925255681, 1605219002006925312]
+2022-12-20 15:10:17 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605218870326747138
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [3019630126, 1406648464629538823], partitions [1, 1] and offsets [119, 120], sending it to elastic: Thread id 69
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1089802316780355585, 892959492, 972011838815776768, 174716136], partitions [0, 0, 0, 0] and offsets [94, 95, 96, 97], sending it to elastic: Thread id 67
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219007396724736, 1605219011335168000]
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219006868516864, 1605219016808681472, 1605219015164674049, 1605219023188365312]
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219007396724736
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219006868516864
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [992943418052460544, 992943418052460544], partitions [1, 1] and offsets [121, 122], sending it to elastic: Thread id 69
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1015653500741537792, 1565111397179990016, 1386351650995154944], partitions [0, 0, 0] and offsets [98, 99, 100], sending it to elastic: Thread id 67
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219077731291136, 1605219103568007168]
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219030947749888, 1605219034739671040, 1605219050581131267]
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219077731291136
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219030947749888
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [898522796979929088, 1576311844167352320], partitions [0, 0] and offsets [101, 102], sending it to elastic: Thread id 67
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [992943418052460544], partitions [1] and offsets [123], sending it to elastic: Thread id 69
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219132122824704]
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219050539585536, 1605219121326612481]
+2022-12-20 15:10:48 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219132122824704
+2022-12-20 15:10:48 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219050539585536
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1580522788523102208, 1150160956351221760, 1565280726156804099, 1406648464629538823], partitions [1, 1, 1, 1] and offsets [124, 125, 126, 127], sending it to elastic: Thread id 69
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [79128756, 972011838815776768], partitions [0, 0] and offsets [103, 104], sending it to elastic: Thread id 67
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219140465471489, 1605219140867964928, 1605219146324758537, 1605219177534574593]
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219174216830982, 1605219209159626755]
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219140465471489
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219174216830982
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [874394695], partitions [0] and offsets [105], sending it to elastic: Thread id 67
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [992943418052460544, 992943418052460544, 1589245164677394434], partitions [1, 1, 1] and offsets [128, 129, 130], sending it to elastic: Thread id 69
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219198049091584, 1605219221302136834, 1605219239832346624]
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219224749854721]
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219198049091584
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219224749854721
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1464726372392357897], partitions [0] and offsets [106], sending it to elastic: Thread id 67
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1207195739786489856, 1600541579906891806, 1539999452697698304], partitions [1, 1, 1] and offsets [131, 132, 133], sending it to elastic: Thread id 69
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219250809044992]
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219245411160065, 1605219276679483393, 1605219277787000832]
+2022-12-20 15:11:23 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219250809044992
+2022-12-20 15:11:23 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219245411160065
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [972011838815776768, 1586734251571044355], partitions [0, 0] and offsets [107, 108], sending it to elastic: Thread id 67
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1584596480098242565, 992943418052460544, 1488167524084719622, 710123736175783938], partitions [1, 1, 1, 1] and offsets [134, 135, 136, 137], sending it to elastic: Thread id 69
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219295348367360, 1605219306752675840, 1605219322514886656, 1605219343503360000]
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219289010782209, 1605219291862818818]
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219295348367360
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219289010782209
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1167328279872729088, 267907359], partitions [1, 1] and offsets [138, 139], sending it to elastic: Thread id 69
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1142424032794406912], partitions [0] and offsets [109], sending it to elastic: Thread id 67
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219330979168258]
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219342811287552, 1605219346040885248]
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219330979168258
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219342811287552
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 4 number of message received with keys [1412779094, 1572473895617286148, 1583284752785743872, 1575123932989964288], partitions [0, 0, 0, 0] and offsets [110, 111, 112, 113], sending it to elastic: Thread id 67
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [992943418052460544], partitions [1] and offsets [140], sending it to elastic: Thread id 69
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219390609555459]
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219358271234053, 1605219347789758466, 1605219367687696385, 1605219374411005952]
+2022-12-20 15:11:47 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219390609555459
+2022-12-20 15:11:47 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219358271234053
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [893842511361433600, 1102817899457232896], partitions [1, 1] and offsets [141, 142], sending it to elastic: Thread id 69
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [2732610196, 1694961, 2732610196], partitions [0, 0, 0] and offsets [114, 115, 116], sending it to elastic: Thread id 67
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219401648803850, 1605219408129175555, 1605219410511556608]
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219401648803850
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219392098533376, 1605219405746651142]
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219392098533376
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1348745567191621633, 2732610196], partitions [0, 0] and offsets [117, 118], sending it to elastic: Thread id 67
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [992943418052460544, 1551389726925619203], partitions [1, 1] and offsets [143, 144], sending it to elastic: Thread id 69
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219410763186176, 1605219419231330307]
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219420208611328, 1605219419629690880]
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219410763186176
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219420208611328
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [506224403, 1404372913181110276, 992943418052460544], partitions [1, 1, 1] and offsets [145, 146, 147], sending it to elastic: Thread id 69
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1531272269179551745, 2732610196, 2732610196], partitions [0, 0, 0] and offsets [119, 120, 121], sending it to elastic: Thread id 67
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219425623322625, 1605219428064714752, 1605219433697652736]
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605219421592911872, 1605219425837371394, 1605219435786149889]
+2022-12-20 15:12:01 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219425623322625
+2022-12-20 15:12:01 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605219421592911872
+2022-12-20 15:41:11 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://config-server:8888
+2022-12-20 15:41:12 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service,config-client, profiles=[kafka_to_elastic], label=null, version=b74d589740e2608455710bcaac2187cb274dd778, state=null
+2022-12-20 15:41:12 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/eno-lc/spring-cloud-config-server-repository/config-client.yml'}]
+2022-12-20 15:41:12 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2022-12-20 15:41:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:41:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196ms. Found 1 Elasticsearch repository interfaces.
+2022-12-20 15:41:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-12-20 15:41:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-12-20 15:41:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e42a222c-39aa-38fc-980d-071ea8bd4fe1
+2022-12-20 15:41:13 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$5f90aaa3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-20 15:41:13 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-12-20 15:41:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:41:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:41:13 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671550873836
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:14 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-12-20 15:41:15 [main] INFO  o.s.d.e.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.4.RELEASE
+2022-12-20 15:41:15 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2022-12-20 15:41:15 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch Client used: 7.9.1
+2022-12-20 15:41:15 [main] WARN  o.s.d.e.support.VersionInfo - Version mismatch in between Elasticsearch Clients build/use: 7.6.2 - 7.9.1
+2022-12-20 15:41:15 [main] INFO  o.s.d.e.support.VersionInfo - Version Elasticsearch cluster: 7.9.1
+2022-12-20 15:41:15 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 87f061dd-42e7-4aa2-9e4a-3b2d43875cd0
+
+2022-12-20 15:41:16 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2022-12-20 15:41:16 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 6.722 seconds (JVM running for 7.57)
+2022-12-20 15:41:16 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
+2022-12-20 15:41:17 [main] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Topics with name twitter-topic is ready for operations!
+2022-12-20 15:41:17 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:41:17 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671550877184
+2022-12-20 15:41:17 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:41:17 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:41:17 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2022-12-20 15:41:17 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2022-12-20 15:41:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1671550877272
+2022-12-20 15:41:17 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2022-12-20 15:41:17 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2022-12-20 15:41:17 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:41:17 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: TJmGh1tUQ3KbaQNGv4teZw
+2022-12-20 15:41:17 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:41:17 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator kafka-broker-2:9092 (id: 2147483645 rack: null)
+2022-12-20 15:41:17 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:41:17 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2022-12-20 15:41:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Finished assignment for group at generation 9: {consumer-twitterTopicListener-1-70bdf9c0-3177-4491-9edc-d6ffa316c12a=Assignment(partitions=[twitter-topic-0]), consumer-twitterTopicListener-2-733c939d-6101-491d-9f56-574094126fe9=Assignment(partitions=[twitter-topic-1])}
+2022-12-20 15:41:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation 9
+2022-12-20 15:41:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation 9
+2022-12-20 15:41:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2022-12-20 15:41:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2022-12-20 15:41:20 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Setting offset for partition twitter-topic-0 to the committed offset FetchPosition{offset=122, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-1:9092 (id: 1 rack: null)], epoch=absent}}
+2022-12-20 15:41:20 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Setting offset for partition twitter-topic-1 to the committed offset FetchPosition{offset=148, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-broker-3:9092 (id: 3 rack: null)], epoch=absent}}
+2022-12-20 15:41:20 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2022-12-20 15:41:20 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [912661184007905283], partitions [1] and offsets [148], sending it to elastic: Thread id 69
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1582167229449338881, 1030860260179931136, 2385334675], partitions [0, 0, 0] and offsets [122, 123, 124], sending it to elastic: Thread id 67
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605226871309799424, 1605226878196908034, 1605226919800107008]
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605226867514290176]
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605226871309799424
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605226867514290176
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1056705937782775809, 1056705937782775809, 1375961552122044417], partitions [0, 0, 0] and offsets [125, 126, 127], sending it to elastic: Thread id 67
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 6 number of message received with keys [962976790133248000, 1598422286851252234, 1050363426357174272, 1488598608123502595, 1415494393297915904, 1595909230598529024], partitions [1, 1, 1, 1, 1, 1] and offsets [149, 150, 151, 152, 153, 154], sending it to elastic: Thread id 69
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605226919401869313, 1605226930072162304, 1605226937130971138, 1605226967082704898, 1605227013538992129, 1605227021562511360]
+2022-12-20 15:42:11 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605226919401869313
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605226940155449345, 1605226963152822272, 1605227035248381952]
+2022-12-20 15:42:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605226940155449345
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1277340096988164102, 1404372913181110276], partitions [1, 1] and offsets [155, 156], sending it to elastic: Thread id 69
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [980220201756217345, 1575001128927895555], partitions [0, 0] and offsets [128, 129], sending it to elastic: Thread id 67
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227035282096129, 1605227041707552768]
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227043666509825, 1605227084409864197]
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227035282096129
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227043666509825
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 2 number of message received with keys [1357433276940574722, 1378460119604822019], partitions [1, 1] and offsets [157, 158], sending it to elastic: Thread id 69
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [479244973, 1481619431679827969, 1576533344661262336], partitions [0, 0, 0] and offsets [130, 131, 132], sending it to elastic: Thread id 67
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227087211941889, 1605227122355630080, 1605227148985634818]
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227087211941889
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227057696411650, 1605227081423814656]
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227057696411650
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1335060862910955520, 1320467927783657472, 1371551211351121920], partitions [0, 0, 0] and offsets [133, 134, 135], sending it to elastic: Thread id 67
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 3 number of message received with keys [1085737246999932929, 1094022475736903687, 2422703600], partitions [1, 1, 1] and offsets [159, 160, 161], sending it to elastic: Thread id 69
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227183022411778, 1605227191867940864, 1605227195084963840]
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.e.i.c.s.i.TwitterElasticRepositoryIndexClient - Documents indexed successfully with type: com.microservices.demo.elastic.model.index.impl.TwitterIndexModel and ids: [1605227160981032961, 1605227172293218308, 1605227181273223171]
+2022-12-20 15:42:52 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227183022411778
+2022-12-20 15:42:52 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - Documents saved to elasticsearch with ids 1605227160981032961
